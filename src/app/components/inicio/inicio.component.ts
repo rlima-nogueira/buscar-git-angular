@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InicioService } from './inicio.service';
 
 @Component({
   selector: 'app-inicio',
@@ -8,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 export class InicioComponent implements OnInit {
 
   public value;
-  constructor() { }
+  public repositorios;
+  constructor(
+    private inicioService: InicioService,
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  public async buscarGit(): Promise<void> {
+    (await this.inicioService.buscarUsuario(this.value)).subscribe((retorno) => {
+      this.repositorios = retorno;
+    });
+  }
+
+  public limparBusca(): void {
+    this.repositorios = '';
   }
 
 }

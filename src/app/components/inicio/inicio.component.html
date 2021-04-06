@@ -1,13 +1,25 @@
 <main>
-  <section>
-    <mat-label>Buscar Github</mat-label>
+  <section [ngClass]="{'inicio' : !this.repositorios, 'inicio-com-pesquisa' : this.repositorios}">
+    <mat-label [ngClass]="{'titulo' : !this.repositorios, 'titulo-com-pesquisa' : this.repositorios}">
+      Buscar Github
+    </mat-label>
 
     <mat-form-field>
       <input  matInput type="text" [(ngModel)]="value" placeholder="Digite o nome do usuário aqui">
     </mat-form-field>
 
-    <a routerLink="/buscar-git">
-      PESQUISAR
-    </a>
+    <div class="botoes">
+      <a class="botao-buscar" (click)="buscarGit()">
+        PESQUISAR
+      </a>
+      <a (click)="limparBusca()">
+        LIMPAR
+      </a>
+    </div>
+  </section>
+
+  <section class="pesquisa" *ngIf="this.repositorios">
+    <app-buscar></app-buscar>
   </section>
 </main>
+

@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { AngularMaterialModule } from 'src/app/angular-material/angular-material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { FormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     AngularMaterialModule,
     FormsModule,
+    HttpClientModule,
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

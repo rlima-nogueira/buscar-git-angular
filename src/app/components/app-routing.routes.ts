@@ -9,10 +9,6 @@ const routes: Routes = [
     component: InicioComponent,
   },
   {
-    path: 'buscar-git',
-    component: BuscarComponent,
-  },
-  {
     path: '',
     redirectTo: '/inicio',
     pathMatch: 'full',
