@@ -1,1 +1,48 @@
-<p>buscar works!</p>
+<main>
+  <section class="perfil">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          {{ this.dadosUsuario.name }}
+        </mat-card-title>
+        <mat-card-subtitle>
+          {{ this.dadosUsuario.login }}
+        </mat-card-subtitle>
+      </mat-card-header>
+
+      <div class="foto">
+        <img mat-card-image
+          [src]="this.dadosUsuario.avatar_url"
+          alt="Foto do usuário do github">
+      </div>
+
+      <mat-card-content>
+       <span>
+         {{this.dadosUsuario.bio}}
+       </span>
+       <span>
+         <a [href]="this.dadosUsuario.blog">
+           {{this.dadosUsuario.blog}}
+         </a>
+       </span>
+      </mat-card-content>
+    </mat-card>
+  </section>
+  <section class="repositorios">
+    <mat-grid-list *ngFor="let dados of dadosRepositorio" >
+      <mat-grid-tile>
+        <span class="dados-projeto">
+           Nome repositório:&nbsp;
+          <a class="link-projeto" [href]="dados.html_url" target="_blank">
+            {{ dados.name }}
+          </a>
+        </span>
+        <span class="dados-projeto">
+          <p class="descricao-projeto">
+            {{ dados.description }}
+          </p>
+        </span>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </section>
+</main>

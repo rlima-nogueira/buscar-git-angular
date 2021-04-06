@@ -11,7 +11,11 @@ export class InicioService {
     private http: HttpClient,
   ) { }
 
-  public async buscarUsuario(nomeUsuario): Promise<Observable<any>> {
+  public async buscarRepositorios(nomeUsuario): Promise<Observable<any>> {
     return this.http.get<any>(`https://api.github.com/users/${nomeUsuario}/repos`);
-}
+  }
+
+  public async buscarUsuario(nomeUsuario): Promise<Observable<any>> {
+    return this.http.get<any>(`https://api.github.com/users/${nomeUsuario}`);
+  }
 }

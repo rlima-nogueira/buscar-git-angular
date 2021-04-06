@@ -1,1 +1,120 @@
 @import '../../app.component.css';
+
+main {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.perfil {
+  display: flex;
+  width: 50%;
+  height: 100%;
+}
+
+.repositorios {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+}
+
+mat-grid-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+mat-grid-tile {
+  line-height: 5em;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 100%;
+  background: lightblue;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ecf9f6;
+}
+
+.foto {
+  display: flex;
+  width: 100%;
+  height: 80%;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  width: 40%;
+  height: 100%;
+}
+
+mat-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+mat-card-header {
+  display: flex;
+  flex-direction: column;
+}
+
+mat-card-title {
+  font-family: 'Varela Round', 'Roboto', sans-serif;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+mat-card-subtitle {
+  font-family: 'Varela Round', 'Roboto', sans-serif;
+  font-size: 1em;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+mat-card-content {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  text-align: center;
+  justify-content: center;
+}
+
+.dados-projeto {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Varela Round', 'Roboto', sans-serif;
+  font-size: 1em;
+  color: black;
+}
+
+.descricao-projeto {
+  line-height: 1;
+  width: 90%;
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+  padding-top: 5%;
+}
+
+.link-projeto {
+  text-decoration: none;
+  font-family: 'Varela Round', 'Roboto', sans-serif;
+  font-size: 1em;
+  color: black;
+  cursor: pointer;
+}
+
+.link-projeto:hover {
+  color: #990099;
+}

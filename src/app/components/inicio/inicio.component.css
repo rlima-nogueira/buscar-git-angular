@@ -1,5 +1,5 @@
 @import '../../app.component.css';
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
 
 main {
   display: flex;
@@ -27,12 +27,8 @@ main {
 }
 
 .pesquisa {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
   width: 100%;
-  height: 50%;
+  height: 49%;
 }
 
 mat-form-field {
@@ -79,6 +75,7 @@ a {
   border-radius: 10px;
   font-size: 1em;
   background-color: slategrey;
+  cursor: pointer;
 }
 
 .botoes {

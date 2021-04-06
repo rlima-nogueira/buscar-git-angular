@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-buscar',
@@ -7,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BuscarComponent implements OnInit {
 
+  @Input() dadosRepositorio;
+  @Input() dadosUsuario;
+
+  public urlAvatar: String;
   constructor(
   ) { }
 
   ngOnInit(): void {
+    this.urlAvatar = this.dadosUsuario.avatar_url;
+    console.log('teste', this.dadosUsuario);
+    console.log('teste2', this.dadosRepositorio);
   }
 
 

@@ -5,11 +5,11 @@
     </mat-label>
 
     <mat-form-field>
-      <input  matInput type="text" [(ngModel)]="value" placeholder="Digite o nome do usuário aqui">
+      <input matInput type="text" [(ngModel)]="value" placeholder="Digite o nome do usuário aqui">
     </mat-form-field>
 
     <div class="botoes">
-      <a class="botao-buscar" (click)="buscarGit()">
+      <a class="botao-buscar" (click)="buscarGit(); buscarRepositorios()">
         PESQUISAR
       </a>
       <a (click)="limparBusca()">
@@ -18,8 +18,10 @@
     </div>
   </section>
 
-  <section class="pesquisa" *ngIf="this.repositorios">
-    <app-buscar></app-buscar>
+  <section class="pesquisa" *ngIf="this.usuario">
+    <app-buscar
+      [dadosRepositorio]="this.repositorios"
+      [dadosUsuario]="this.usuario"
+    ></app-buscar>
   </section>
 </main>
-
