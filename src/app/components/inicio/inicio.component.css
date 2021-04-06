@@ -1,0 +1,57 @@
+@import '../../app.component.css';
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+main {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+mat-form-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
+  height: 20%;
+}
+
+mat-label {
+  font-family: 'Varela Round', 'Roboto', sans-serif;
+  font-size: 5em;
+}
+
+input {
+  width: 100%;
+  text-align: center;
+  line-height: 25px;
+  border-radius: 10px;
+}
+
+input:focus, a:focus {
+  outline-style: none;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+a {
+  width: 10%;
+  padding: 7px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  border-radius: 10px;
+  font-size: 1em;
+  background-color: slategrey;
+}
